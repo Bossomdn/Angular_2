@@ -1,0 +1,35 @@
+<form [formGroup]="demographicForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input id="firstName" formControlName="firstName">
+    </div>
+  
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" formControlName="lastName">
+    </div>
+  
+    <div>
+      <label for="birthDate">Birth Date:</label>
+      <input id="birthDate" type="date" formControlName="birthDate">
+    </div>
+  
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" type="number" formControlName="age">
+    </div>
+  
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <br>
+    <button type="submit" [disabled]="demographicForm.invalid">Submit</button>
+  </form>
+  

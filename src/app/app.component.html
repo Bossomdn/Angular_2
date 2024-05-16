@@ -1,0 +1,30 @@
+<h1>Login Form</h1>
+<app-login></app-login>
+
+<h1>Demographic Form</h1>
+<app-demographic></app-demographic>
+
+<h1>Attribute Directive</h1>
+<div class="center-content">
+    <button appChangeDirective>ศิวกร โพธิ์ทอง</button>
+    
+</div>
+<li class="center-content">เมื่อคลิกที่ข้อความแล้วจะเปลี่ยนข้อความและเปลี่ยนสี</li>
+
+<h1>Structural Directive</h1>
+<div class="center-content">
+    <p *appCustomIf="showContent">HELLO WORLD!!!!</p>
+    
+    <button (click)="showContent = !showContent">More</button>
+</div>
+
+<li class="center-content">เมื่อคลิกแล้วข้อความจะถูกcopyเพิ่มขึ้นมา</li>
+
+<div>
+    <h1>Pipe Example</h1>
+    <p>Original: {{ exampleText }}</p>
+    <p>Reversed: {{ exampleText | reverseText }}</p>
+</div>
+
+<li class="center-content">Custom Pipe ที่มีชื่อว่า reverseText ซึ่งจะใช้สำหรับการกลับตัวอักษรในข้อความที่ให้มา</li>
+  
